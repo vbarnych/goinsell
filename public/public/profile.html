@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QAuction</title>
+
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+
+
+
+<body link="black" vlink="black" alink="black">
+    <div id="pageProfile" class="page">
+        <div id="headerProfile" class="header">
+
+            <div id="logo">
+
+            </div>
+
+            <div id="home">
+                <a href="index.html">HOME</a>
+            </div>
+
+            <div id="profile">
+                <a href="profile.html">PROFILE</a>
+            </div>
+
+            <div id="login">
+                <a href="login.html">LOGIN</a>
+            </div>
+
+            <div id="registration">
+                <a href="registration.html">REGISTRATION</a>
+            </div>
+            <div id="logout">
+
+                <input type="button" size="10px" value="LOGOUT" onclick="logout()">
+
+            </div>
+        </div>
+
+        <div id="contentProfile" class="content">
+            <div id="profileData">
+                <form id="profileDataForm">
+
+                    <img src="ava.jfif">
+
+                    <h1>NAME</h1>
+
+                    <h1>NUMBER OF ITEMS</h1>
+                </form>
+            </div>
+            <div id="newLot">
+                <form id="newLotForm">
+                    <h1>LOT'S INFORMATION</h1>
+                    <h3>NAME</h3>
+                    <input id="profileInputName" type="text" size="25px" style="border: 3px solid black">
+                    <h3>PRICE</h3>
+                    <input id="profileInputPrice" type="text" size="25px" style="border: 3px solid black">
+                    <h3>DESCRIPTION</h3>
+                    <textarea id="prDeskArea" class="scrollArea" style="width: 90%; ">
+
+                    </textarea>
+                    <h3>TAGS</h3>
+                    <textarea id="prTagsArea" class="scrollArea" style=" width: 90%">
+
+                    </textarea>
+
+                    <input type="submit" value="ADD LOT">
+                </form>
+            </div>
+            <div id="myLots">
+                <form id="myLotsForm">
+                    <h1>MY LOTS</h1>
+                    <textarea id="myLotsArea" class="scrollArea" readonly style="height: 90%;">
+
+                    </textarea>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"> </script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+
+    <script src="auth.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBg5bgjGWsv9OaE-zuH6l1P3z2K1UbTGVk",
+            authDomain: "goinsell.firebaseapp.com",
+            databaseURL: "https://goinsell.firebaseio.com",
+            projectId: "goinsell",
+            storageBucket: "goinsell.appspot.com",
+            messagingSenderId: "945045033295",
+            appId: "1:945045033295:web:24fae3d7e656f8e48df53a"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        var auth = firebase.auth();
+
+
+        //document.getElementById("logoutHref").addEventListener("click", () => {console.log("logout")});
+
+        //document.getElementById("logoutButton").addEventListener("click", logout);
+
+
+    </script>
+
+</body>
+</html>

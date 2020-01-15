@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QAuction</title>
+
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+
+
+
+
+
+<body link="black" vlink="black" alink="black">
+<div id="pageHome" class="page">
+    <div id="headerHome" class="header">
+
+        <div id="logo">
+
+        </div>
+
+        <div id="home">
+            <a href="index.html">HOME</a>
+        </div>
+
+        <div id="profile">
+            <a href="profile.html">PROFILE</a>
+        </div>
+
+        <div id="login">
+            <a href="login.html">LOGIN</a>
+        </div>
+
+        <div id="registration">
+            <a href="registration.html">REGISTRATION</a>
+        </div>
+        <div id="logout">
+            <input type="button" size="10px" value="LOGOUT" onclick="logout()">
+        </div>
+    </div>
+
+    <div id="contentHome" class="content">
+        <div id="searchHome">
+            <input id="searchHomeInput" type="text" size="25px">
+            <input type="button" value="SEARCH LOTS" onclick="add()">
+            <form>
+
+                <p><input name="typesearch" type="radio"  value="tags">Names</p>
+                <p><input name="typesearch" type="radio" value="names" checked>Tags</p>
+
+
+            </form>
+
+        </div>
+
+        <div id="lotsHome">
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"> </script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+
+<script src="auth.js"></script>
+
+<script>
+
+    var firebaseConfig = {
+        apiKey: "AIzaSyBg5bgjGWsv9OaE-zuH6l1P3z2K1UbTGVk",
+        authDomain: "goinsell.firebaseapp.com",
+        databaseURL: "https://goinsell.firebaseio.com",
+        projectId: "goinsell",
+        storageBucket: "goinsell.appspot.com",
+        messagingSenderId: "945045033295",
+        appId: "1:945045033295:web:24fae3d7e656f8e48df53a"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    var db = firebase.firestore();
+
+    var auth = firebase.auth();
+
+
+
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,181 @@
+.page{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+
+
+    grid-template-areas:
+            "h"
+            "c"
+;
+
+    height: 100%;
+
+    background: #E1E1E1;
+
+}
+
+.header{
+    grid-area: h;
+
+
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+            "lg hm pr lgn rg lo";
+
+    background: #E0E0E0;
+
+}
+
+
+.header>div{
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;
+    font: 30px "Franklin Gothic Medium";
+    letter-spacing: 2px;
+
+
+}
+
+.header>div>a{
+    text-decoration: none;
+
+
+    vertical-align: center;
+}
+
+.header>div:hover{
+    background: #818181;
+}
+
+
+.content{
+    grid-area: c;
+
+    background: #F9F9F9;
+
+    font-family: "Franklin Gothic Medium", serif;
+
+}
+
+#logo{
+    grid-area: lg;
+
+}
+
+#home{
+    grid-area: hm;
+
+}
+
+#profile{
+    grid-area: pr;
+
+}
+
+#login{
+    grid-area: lgn;
+
+}
+
+#registration{
+    grid-area: rg;
+
+}
+
+#logout{
+    grid-area: lo;
+
+}
+
+.contactForm{
+
+
+}
+
+#contentHome{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+        "srHm"
+        "ltHm";
+
+}
+
+#searchHome{
+    grid-area: srHm;
+    border: 3px solid blue;
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;
+}
+
+
+
+#lotsHome{
+    grid-area: ltHm;
+    border : 3px solid #6eff1d;
+}
+
+#contentProfile{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "prDt nwLt mLts";
+}
+
+
+#profileData{
+    grid-area: prDt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#newLot{
+    grid-area: nwLt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myLots{
+    grid-area: mLts;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contentReg{
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;
+}
+
+#contentLogin{
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;
+}
+
+.scrollArea{
+    overflow-y: scroll;
+}
+
